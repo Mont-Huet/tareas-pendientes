@@ -1,87 +1,134 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
-    font-family: "lato", sans-serif;
-    font-weight: 100;
-    font-style: normal;
-    background: rgb(63,161,251);
-background: radial-gradient(circle, rgba(63,161,251,0.9136029411764706) 0%, rgba(79,70,252,1) 100%);
-background-repeat: no-repeat;
-background-size: contain;
-background-position: center;
-height: 100vh;
-color: #3a5f6f;
-display: flex;
-justify-content: center;
+    font-family: "Roboto", sans-serif;
+    background: linear-gradient(135deg, #2C3E50, #34495E);
+    background-attachment: fixed;
+    color: #2C3E50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
-.contenedor{
-    max-width: 80%;
-    width: 400px;
-    height: 600px;
-    margin: 0 auto;
-    padding: 40px;
+
+.contenedor {
+    max-width: 400px;
+    width: 100%;
+    background: #F4F6F7;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
 }
-.encabezado{
-    padding: 10px 0 5px 0;
+
+#fecha {
+    font-size: 0.9rem;
+    color: #7F8C8D;
+    margin-bottom: 10px;
 }
-.agregar{
-    background-color: aquamarine;
-    border-radius: 15px;
-    height: 70px;
+
+.encabezado h1 {
+    font-size: 1.8rem;
+    color: #2C3E50;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.encabezado h2 {
+    font-size: 1.2rem;
+    color: #16A085;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.agregar {
+    background-color: #ECF0F1;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     padding: 10px;
-    gap: 70px;
+    gap: 10px;
+    margin-bottom: 20px;
 }
-.agregar input{
+
+.agregar input {
     width: 100%;
     height: 100%;
     border: none;
     border-radius: 8px;
-    background-color: white;
-    padding-left: 10px;
+    background-color: #FFFFFF;
+    padding-left: 15px;
+    font-size: 1rem;
+    color: #2C3E50;
 }
-agregar input::placeholder{
-    font-size: 1.1rem;
-    color: blue;
 
+.agregar input::placeholder {
+    font-size: 1rem;
+    color: #7F8C8D;
 }
-.agregar i{
-    font-size: 45px;
-    color: bisque;
-}
-.agregar i:hover{
-    transform: scale(1.1);
+
+.agregar i {
+    font-size: 30px;
+    color: #2980B9;
     cursor: pointer;
 }
-/*seccion de tareas*/
-.tareas h2{
-    margin-bottom: 20px;
+
+.agregar i:hover {
+    transform: scale(1.2);
 }
-.tareas li{
-    background-color: blueviolet;
-    border-radius: 15px;
-    padding: 10px;
-    color: aliceblue;
-    margin: 5px 0;
+
+.tareas {
+    font-size: 1rem;
+}
+
+.tareas h2 {
+    font-size: 1.5rem;
+    color: #2C3E50;
+    margin-bottom: 15px;
+}
+
+.tareas ul {
+    list-style: none;
+}
+
+.tareas li {
+    background-color: #BDC3C7;
+    border-radius: 10px;
+    padding: 15px;
+    color: #2C3E50;
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: background-color 0.3s ease;
 }
-.tareas{
-    font-size: 25px;
+
+.tareas li:hover {
+    background-color: #95A5A6;
 }
-.tareas p{
+
+.tareas p {
     font-weight: 600;
+    margin: 0;
 }
-.tareas i:hover{
-    color: aquamarine;
+
+.tareas i {
+    font-size: 20px;
+    color: #C0392B;
     cursor: pointer;
+    transition: color 0.3s ease;
 }
-.tachado{
+
+.tareas i:hover {
+    color: #A93226;
+}
+
+.tachado {
     text-decoration: line-through;
-    
+    opacity: 0.6;
 }

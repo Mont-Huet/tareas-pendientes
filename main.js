@@ -26,7 +26,7 @@ function agregarTarea(tarea, id, hecho, eliminar) {
     const LINE = hecho ? tachado : ''
     const elemento = `<li id="elemento">
                     <i id="${id}" data="hecho" class="bi ${realizado}"></i>
-                    <p class="tarea-lista text ${LINE}">${Tarea}</p>
+                    <p class="tarea-lista text ${LINE}">${tarea}</p>
                     <i id="${id}" data="eliminar" class="bi bi-x"></i>
                 </li>`
                 lista.insertAdjacentHTML("beforeend",elemento);
@@ -64,7 +64,7 @@ botonAgregar.addEventListener("click", () => {
 lista.addEventListener("click", function (event){
     const element = event.target;
     const elementData = element.attributes.data.value;
-    if (element == "hecho") {
+    if (elementData == "hecho") {
         tareaRealizada(element);
     } else if (elementData == "eliminar"){
         tareaEliminada(element); 
